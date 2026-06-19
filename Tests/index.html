@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <title>Space</title>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-sky src="textures/galaxy.jpg"> </a-sky>
+    <a-entity camera look-controls position="0 140 50"></a-entity>
+    <a-sphere src="textures/sun.jpg" radius="30" rotation="0 0 0" position="0 0 40"></a-sphere>
+    
+  
+    <a-entity animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 2300; easing: linear" position="0 0 40">
+      <a-sphere src="textures/mercury.jpg" radius="1.8" rotation="0 0 0.01" position="0 0 -45" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 6000; easing: linear"></a-sphere>
+    </a-entity>
+
+    <a-entity animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 3300; easing: linear" position="0 0 40">
+      <a-sphere src="textures/venus.jpg" radius="3.7" rotation="0 0 180" position="0 0 -67" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 10000; easing: linear; dir: reverse"></a-sphere>
+    </a-entity>
+
+    <a-entity animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 4500; easing: linear" position="0 0 40">
+      <a-sphere src="textures/earthNight.jpg" radius="4" rotation="0 0 23.4" position="0 0 -92" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 3000; easing: linear"></a-sphere>
+    </a-entity>
+
+
+    <a-entity animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 6400; easing: linear" position="0 0 40">
+      <a-sphere src="textures/mars.jpg" radius="3.3" rotation="0 0 25" position="0 0 -120" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 3300; easing: linear"></a-sphere>
+    </a-entity>
+
+
+    <a-entity animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 10000; easing: linear" position="0 0 40">
+      <a-sphere src="textures/jupiter.jpg" radius="15" rotation="0 0 2.5" position="0 0 -154" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 1000; easing: linear"></a-sphere>
+    </a-entity>
+
+
+    <a-entity  position="0 0 40">
+      <a-sphere src="textures/saturn.jpg" radius="13.5" rotation="0 0 2.7" position="0 0 -210" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 1300; easing: linear">
+        <a-ring color="floralwhite" radius-inner="17" radius-outer="15"></a-ring>
+        <a-ring color="burlywood" radius-inner="23" radius-outer="19"></a-ring>
+        <a-ring color="gray" radius-inner="27" radius-outer="25"></a-ring>
+      </a-sphere>
+    </a-entity>
+
+    <a-entity animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 20000; easing: linear" position="0 0 40">
+      <a-sphere src="textures/uranus.jpg" radius="8.9" rotation="0 0 97.8" position="0 0 -250" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 2200; easing: linear; dir: reverse"></a-sphere>
+    </a-entity>
+
+    <a-entity animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 30000; easing: linear" position="0 0 40">
+      <a-sphere src="textures/neptune.jpg" radius="8.3" rotation="0 0 28.3" position="0 0 -280" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 2000; easing: linear"></a-sphere>
+    </a-entity>
+
+
+  </a-scene>
+  
+</body>
+
+</html>

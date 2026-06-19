@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/vanngrann/aframe-rain-system@v1.0.0/scripts.js"></script>
+
+</head>
+
+<body>
+    <a-scene id="scene" rain environment="preset: arches">
+        <a-plane opacity="0" static-body rotation = "-90 0 0" width="100" height="100" color="green"></a-plane>
+        <a-box dynamic-body position = "0 10 -5" color ="red"></a-box>
+
+    </a-scene>
+</body>
+
+</html>

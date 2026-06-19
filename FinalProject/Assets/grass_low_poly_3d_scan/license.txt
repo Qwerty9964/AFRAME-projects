@@ -1,0 +1,11 @@
+Model Information:
+* title:	Grass low poly 3d scan
+* source:	https://sketchfab.com/3d-models/grass-low-poly-3d-scan-ff850d5812c24c1aaf31955396e95144
+* author:	Sam3D (https://sketchfab.com/samuelcrevier12)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Grass low poly 3d scan" (https://sketchfab.com/3d-models/grass-low-poly-3d-scan-ff850d5812c24c1aaf31955396e95144) by Sam3D (https://sketchfab.com/samuelcrevier12) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

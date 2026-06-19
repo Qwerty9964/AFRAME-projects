@@ -1,0 +1,11 @@
+Model Information:
+* title:	blue Slime
+* source:	https://sketchfab.com/3d-models/blue-slime-77febde4ace244ec8912d876ccbfdb9c
+* author:	geoplex2022 (https://sketchfab.com/geoplex2022)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "blue Slime" (https://sketchfab.com/3d-models/blue-slime-77febde4ace244ec8912d876ccbfdb9c) by geoplex2022 (https://sketchfab.com/geoplex2022) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

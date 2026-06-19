@@ -1,0 +1,17 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <script src="//unpkg.com/aframe-extras@4.1.2/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene light="defaultLightsEnabled: false">
+        <a-sky color="lightblue"></a-sky>
+        <a-entity camera look-controls position="0 0 10" rotation="0 180 0"></a-entity>
+        <a-gltf-model src="simple_dog/scene.gltf" scale="0.15 0.15 0.15" position="0 0 0" rotation="0 0 0" animation-mixer></a-gltf-model>
+    </a-scene>
+</body>
+
+</html>

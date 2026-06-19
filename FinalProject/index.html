@@ -1,0 +1,259 @@
+<!-- CONTROLS ARE WASD TO MOVE, ARROW KEYS TO ROTATE CAMERA, M TO CHANGE CAMERA MODES, AND E TO ATTACK-->
+
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  <script src="game.js"></script>
+</head>
+
+<body>
+    <a-scene slime-spawn="target: #flag; targetui: #health_ui">
+        <a-sky color="LightSlateGrey"></a-sky>
+
+        <a-light type="ambient" color="white" intensity="1.5"></a-light>
+        <a-light type="directional" color="yellow" intensity="2.1" position="0 26 -53.7"></a-light>
+        <a-light type="point" position="0 0 63" color="white" intensity="800" rotation="0 -164 0"></a-light>
+        <a-light type="spot"  intensity="300" position="-41.2 12 35" rotation="0 -40 0" color="SandyBrown"></a-light>
+
+        <!-- Player -->
+        <a-box id="player" input-check="floor-height: 0; sui: #score_ui" position="0 0.5 0" color="tomato">
+
+            <!-- Camera -->
+            <a-entity camera look-controls position="0 1 2" rotation="-35 180 0" camera-modes="hui: #health_ui; sui: #score_ui"></a-entity>
+
+            <!-- UI -->
+            <a-text id="health_ui" position="-8.7 4.5 -2" value="Flag Health: 100" color="blue" width="9"></a-text>
+            <a-text id="score_ui" position="-9 4 -2" value="Score: 0" color="white" width="9"></a-text>
+
+            <!-- Airlines -->
+            <a-box scale="0.1 0.1 1" position="-0.25 0.8 1.369" visible_check></a-box>
+            <a-box scale="0.1 0.1 1" position="0.4 0.75 1.423" visible_check></a-box> 
+            <a-box scale="0.1 0.1 1" position="0.02 0.73 1.46" visible_check></a-box> 
+            <a-box scale="0.1 0.1 1" position="0.415 0.3 1.441" visible_check></a-box> 
+            <a-box scale="0.1 0.1 1" position="-0.02 0.231 1.476" visible_check></a-box> 
+            <a-box scale="0.1 0.1 1" position="-0.33 0.4 1.42" visible_check></a-box>
+    
+            <!-- Cone Thingamabobamagig -->
+            <a-cone radius-bottom="0.5" radius-top="0.2" position="0 0 -1.5" rotation="-90 0 0" scale="1 1.5 1" color="CornflowerBlue" visible_check></a-cone>
+        </a-box>
+        
+        <!-- Grass/Ground -->
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="35 0 0"></a-gltf-model>
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="11.23 0 0"></a-gltf-model>
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="-13.3 0 0"></a-gltf-model>
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="-36.8 0 0"></a-gltf-model>
+
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="-37 0 -78.14"></a-gltf-model>
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="-13.9 0 -78.14"></a-gltf-model>
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="10.2 0 -78.14"></a-gltf-model>
+        <a-gltf-model src="Assets/grass_low_poly_3d_scan/scene.gltf" scale="10.5 1 22" position="35 0 -78.14"></a-gltf-model>
+         
+        <!-- House -->
+        <a-gltf-model src="Assets/low_poly_house/scene.gltf" scale="0.015 0.015 0.015" position="0 0 -90" rotation="0 90 0"></a-gltf-model>
+
+        <!-- Flag-->
+        <a-entity id = "flag">
+            <a-cylinder height="8" position="0 4 0" color="LightSteelBlue" radius="0.4"></a-cylinder>
+            <a-box position="-1.17 6.984 0.335" rotation="0 107 0" scale="0.5 2 -3.341" color="crimson"></a-box>
+        </a-entity>
+        
+
+        <!-- Trees -->
+        <a-entity position="45 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 22" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 9" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -4" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -17" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -30" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -43" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -56" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -69" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -82" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -95" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="45 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="32 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="19 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="6 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-7 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-20 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-33 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 22" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 9" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -4" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -17" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -30" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -43" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -56" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -69" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -82" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -95" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 -108" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="32 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="19 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="6 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-7 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-20 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-33 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+        <a-entity position="-43 0 35" scale="2 2 2">
+            <a-cylinder radius="1" height="6" position="0 3 0" color="SaddleBrown"></a-cylinder>
+            <a-box width="4" height="4" depth="4" position="0 8 0" color="OliveDrab"></a-box>
+        </a-entity>
+
+
+        
+
+    </a-scene>
+</body>
+
+</html>
